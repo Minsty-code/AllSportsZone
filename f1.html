@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Sports Zone - Formule 1</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/LogoAllSportsZone.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html"><img src="assets/images/LogoAllSportsZone.png" alt="Logo All Sports Zone"><span>All Sports Zone</span></a>
+    <nav><ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="themes.html">Thèmes</a></li>
+      <li><a href="nous.html">Nous</a></li>
+      <li><a href="revision.html">Révision</a></li>
+    </ul></nav>
+    <div class="settings">
+        <button class="btn secondary settings-btn" type="button">Paramètres</button>
+            <div class="settings-panel">
+        <div class="toggle-row">
+            <span>Mode clair / sombre</span>
+            <div id="modeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Taille du texte</span>
+            <div id="sizeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Contraste</span>
+            <div id="contrastSwitch" class="switch"></div>
+        </div>
+            </div>
+    </div>
+  </div>
+</header>
+
+<button id="scrollTopBtn" class="scroll-top-btn" type="button">↑</button>
+
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner">
+        <h1>Formule 1</h1>
+        <p>Une discipline où la vitesse rencontre la stratégie et la technologie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container sport-layout">
+      <article class="panel">
+        <a class="btn back" href="javascript:history.back()">← Retour</a>
+        <h1>La course de haut niveau</h1>
+        <img class="sport-image" src="assets/images/ImageF1.png" alt="Voiture de Formule 1">
+        <p>La Formule 1 est un sport automobile où des pilotes s’affrontent sur circuit avec des voitures ultra performantes.</p>
+        <p>Il faut de la concentration, des réflexes et une vraie stratégie d’équipe pour gagner.</p>
+        <h2>À retenir</h2>
+        <ul>
+          <li>Circuits fermés.</li>
+          <li>Voitures très rapides.</li>
+          <li>Stratégie et arrêts aux stands.</li>
+          <li>Travail entre pilote et ingénieurs.</li>
+        </ul>
+      </article>
+      <aside class="panel stats">
+        <div class="stat"><strong>Type</strong><span>Sport mécanique</span></div>
+        <div class="stat"><strong>Lieu</strong><span>Circuit</span></div>
+        <div class="stat"><strong>Qualités</strong><span>Réactivité, précision, stratégie</span></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><p>All Sports Zone</p></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>

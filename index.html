@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Sports Zone - Accueil</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/LogoAllSportsZone.png">
+  <meta name="description" content="Site scolaire sur les sports : escrime, F1, handball et ski.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+    
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html" aria-label="Retour à l'accueil">
+      <img src="assets/images/LogoAllSportsZone.png" alt="Logo All Sports Zone">
+      <span>All Sports Zone</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="themes.html">Thèmes</a></li>
+        <li><a href="nous.html">Nous</a></li>
+        <li><a href="revision.html">Révision</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu paramètres -->
+    <div class="settings">
+        <button class="btn secondary settings-btn" type="button">Paramètres</button>
+            <div class="settings-panel">
+        <div class="toggle-row">
+            <span>Mode clair / sombre</span>
+            <div id="modeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Taille du texte</span>
+            <div id="sizeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Contraste</span>
+            <div id="contrastSwitch" class="switch"></div>
+        </div>
+            </div>
+    </div>
+  </div>
+</header>
+    
+<button id="scrollTopBtn" class="scroll-top-btn" type="button">↑</button>
+    
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-box">
+        <h1>Bienvenue sur All Sports Zone</h1>
+        <p>All Sports Zone est un site scolaire qui présente différents sports de manière simple et claire. L’objectif est de découvrir leurs caractéristiques, leurs règles principales et les qualités nécessaires pour les pratiquer. Des information sur nous, les créateurs, sont aussi disponible en plus d'un onglet dédié a des révision de technologie de l'année de 4e ! Bonne visite...</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="themes.html">Voir nos sports</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="mini-card">
+          <h3>A propos de nous</h3>
+          <p>Découvre les infos de notre petite équipe de travail.</p>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="nous.html">Voir les CV</a>
+          </div>
+        </div>
+
+        <div class="mini-card">
+          <h3>Révision</h3>
+          <p>Retrouve les bases de technologie de 4e dans des fiches simple et claire.</p>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="revision.html">Commencer les révision</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>All Sports Zone — Prototype scolaire</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

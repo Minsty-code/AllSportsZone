@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Sports Zone - A propos de nous</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/LogoAllSportsZone.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html"><img src="assets/images/LogoAllSportsZone.png" alt="Logo All Sports Zone"><span>All Sports Zone</span></a>
+    <nav><ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="themes.html">Thèmes</a></li>
+      <li><a class="active" href="nous.html">Nous</a></li>
+      <li><a href="revision.html">Révision</a></li>
+    </ul></nav>
+    <div class="settings">
+        <button class="btn secondary settings-btn" type="button">Paramètres</button>
+            <div class="settings-panel">
+        <div class="toggle-row">
+            <span>Mode clair / sombre</span>
+            <div id="modeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Taille du texte</span>
+            <div id="sizeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Contraste</span>
+            <div id="contrastSwitch" class="switch"></div>
+        </div>
+            </div>
+    </div>
+  </div>
+</header>
+
+<button id="scrollTopBtn" class="scroll-top-btn" type="button">↑</button>
+    
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner">
+        <h1>A propos de nous</h1>
+        <p>Découvre notre équipe et les rôles de chacun dans la création du site. Chaque membre a participé à une étape importante du projet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cv-grid">
+      <article class="cv-card" data-open-cv="paul">
+        <div class="zoom">🔍</div>
+        <h3>Paul Parmantier</h3>
+        <div class="role">Développeur</div>
+        <p>HTML, CSS, JS, logique.</p>
+        <ul>
+          <li>Code propre</li>
+          <li>Travail en équipe</li>
+          <li>Gestion du projet</li>
+        </ul>
+      </article>
+
+      <article class="cv-card" data-open-cv="mia">
+        <div class="zoom">🔍</div>
+        <h3>Mia Perrot-Wilkinson</h3>
+        <div class="role">Design</div>
+        <p>Graphisme, mise en page, créativité.</p>
+        <ul>
+          <li>Charte graphique</li>
+          <li>Esthétique</li>
+          <li>Créativité</li>
+        </ul>
+      </article>
+
+      <article class="cv-card" data-open-cv="sara">
+        <div class="zoom">🔍</div>
+        <h3>Sara Zabbar</h3>
+        <div class="role">Rédaction</div>
+        <p>Texte, synthèse, présentation claire.</p>
+        <ul>
+          <li>Rédaction web</li>
+          <li>Organisation</li>
+          <li>Vérification</li>
+        </ul>
+      </article>
+
+      <article class="cv-card" data-open-cv="raphael">
+        <div class="zoom">🔍</div>
+        <h3>Raphaël Renollaud</h3>
+        <div class="role">Tests</div>
+        <p>Débogage, vérification, support technique.</p>
+        <ul>
+          <li>Tests du site</li>
+          <li>Repérage des bugs</li>
+          <li>Solutions pratiques</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- Modal pour ouvrir les CV -->
+<div id="cvModal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="closeModal" class="modal-close" type="button">×</button>
+    <div class="modal-head">
+      <h2 id="modalTitle"></h2>
+      <p id="modalRole"></p>
+    </div>
+
+    <div class="modal-grid">
+      <div class="modal-box">
+        <h3>Profil</h3>
+        <p id="modalProfile"></p>
+      </div>
+      <div class="modal-box">
+        <h3>Formation</h3>
+        <p id="modalSchool"></p>
+      </div>
+      <div class="modal-box">
+        <h3>Expérience</h3>
+        <p id="modalExp"></p>
+      </div>
+      <div class="modal-box">
+        <h3>Compétences</h3>
+        <div id="modalSkills" class="tags"></div>
+      </div>
+      <div class="modal-box">
+        <h3>Langues</h3>
+        <p id="modalLang"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="container"><p>All Sports Zone</p></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>

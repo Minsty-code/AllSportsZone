@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Sports Zone - Nos sports</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/LogoAllSportsZone.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html" aria-label="Retour à l'accueil">
+      <img src="assets/images/LogoAllSportsZone.png" alt="Logo All Sports Zone">
+      <span>All Sports Zone</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a class="active" href="themes.html">Thèmes</a></li>
+        <li><a href="nous.html">Nous</a></li>
+        <li><a href="revision.html">Révision</a></li>
+      </ul>
+    </nav>
+    <div class="settings">
+        <button class="btn secondary settings-btn" type="button">Paramètres</button>
+            <div class="settings-panel">
+        <div class="toggle-row">
+            <span>Mode clair / sombre</span>
+            <div id="modeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Taille du texte</span>
+            <div id="sizeSwitch" class="switch"></div>
+        </div>
+        <div class="toggle-row">
+            <span>Contraste</span>
+            <div id="contrastSwitch" class="switch"></div>
+        </div>
+            </div>
+    </div>
+  </div>
+</header>
+
+<button id="scrollTopBtn" class="scroll-top-btn" type="button">↑</button>
+
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner">
+        <h1>Nos sports</h1>
+        <p>Choisis un sport pour découvrir ses règles, ses particularités et les compétences nécessaires pour le pratiquer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid cards">
+      <a class="card-link" href="f1.html">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/images/ImageF1.png" alt="Formule 1">
+          </div>
+          <div class="content">
+            <h3>Formule 1</h3>
+            <p>Vitesse, stratégie et technologie sur circuit.</p>
+          </div>
+        </article>
+      </a>
+
+      <a class="card-link" href="escrime.html">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/images/ImageEscrime.png" alt="Escrimeurs">
+          </div>
+          <div class="content">
+            <h3>Escrime</h3>
+            <p>Duels rapides et précision extrême.</p>
+          </div>
+        </article>
+      </a>
+
+      <a class="card-link" href="handball.html">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/images/ImageHand.png" alt="Joueuses de handball">
+          </div>
+          <div class="content">
+            <h3>Handball</h3>
+            <p>Sport collectif intense et rapide.</p>
+          </div>
+        </article>
+      </a>
+
+      <a class="card-link" href="ski.html">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/images/ImageSki.png" alt="Skieur">
+          </div>
+          <div class="content">
+            <h3>Ski</h3>
+            <p>Glisse, équilibre et maîtrise de la montagne.</p>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>All Sports Zone — prototype scolaire</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
