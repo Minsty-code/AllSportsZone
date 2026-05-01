@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Sports Zone - Ski</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="LogoAllSportsZone.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/LogoAllSportsZone.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
   <div class="container navbar">
-    <a class="logo" href="index.html"><img src="LogoAllSportsZone.png" alt="Logo All Sports Zone"><span>All Sports Zone</span></a>
+    <a class="logo" href="index.html"><img src="assets/images/LogoAllSportsZone.png" alt="Logo All Sports Zone"><span>All Sports Zone</span></a>
     <nav><ul>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="themes.html">Thèmes</a></li>
@@ -44,7 +44,7 @@
     <div class="container">
       <div class="banner">
         <h1>Ski</h1>
-        <p>Un sport de glisse qui demande équilibre, contrôle et adaptation.</p>
+        <p>Un sport de glisse qui demande technique, rigeur et talent</p>
       </div>
     </div>
   </section>
@@ -53,9 +53,9 @@
     <div class="container sport-layout">
       <article class="panel">
         <a class="btn back" href="javascript:history.back()">← Retour</a>
-        <h1>La maîtrise de la glisse</h1>
-        <img class="sport-image" src="ImageSki.png" alt="Skieur">
-        <p>Le ski se pratique sur neige et consiste à descendre une pente avec vitesse et contrôle.</p>
+        <h1>La maîtrise de la tehnique</h1>
+        <img class="sport-image" src="assets/images/ImageSki.png" alt="Skieur" style="object-fit: cover; object-position: 20% 0%;">
+        <p>Le ski se pratique principalement sur neige mais également sur l'eau, le sable ou le synthétique. Ainsi, il consiste à descendre une pente avec des longs patins étroits fixé au pieds, avec de la technique, du contrôle, et de la maitrise du ski.</p>
         <p>Il existe plusieurs disciplines, chacune avec des exigences différentes.</p>
         <h2>À retenir</h2>
         <ul>
@@ -68,13 +68,36 @@
       <aside class="panel stats">
         <div class="stat"><strong>Type</strong><span>Sport de glisse</span></div>
         <div class="stat"><strong>Lieu</strong><span>Montagne / neige</span></div>
-        <div class="stat"><strong>Qualités</strong><span>Équilibre, maîtrise, adaptation</span></div>
+        <div class="stat"><strong>Qualités</strong><span>Motivation, concentration, adaptation</span></div>
       </aside>
     </div>
   </section>
 </main>
 
-<footer><div class="container"><p>All Sports Zone</p></div></footer>
-<script src="script.js"></script>
+<footer>
+  <div class="container footer-container">
+    <div class="footer-links" aria-label="Liens internes">
+      <a href="index.html">Accueil</a>
+      <a href="themes.html">Thèmes</a>
+      <a href="nous.html">Nous</a>  
+      <a href="revision.html">Révision</a>
+    </div>
+
+    <div class="footer-center">
+      <p class="footer-title">AllSportsZone</p>
+      <p class="footer-text">Projet de technologie — 3e</p>
+      <a class="footer-mail" href="mailto:AllSportsZone.fakemail@gmail.com" rel="noopener noreferrer" style="text-decoration: underline;">Nous contacter : AllSportsZone.fakemail@gmail.com</a>
+      <p class="footer-text">“Pour apprendre les meilleures choses de la vie, AllSportsZone.”</p>
+      <p class="footer-copy">© 2026 AllSportsZone</p>
+    </div>
+
+    <div class="footer-right" aria-label="Lien externe">
+      <img class="footer-logo" src="assets/images/LogoFoucauld.png" alt="Logo Foucauld">
+      <a href="https://foucauld.com" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Ensemble scolaire Charles de Foucauld</a>
+      <p class="footer-text">HTML • CSS • JS — 2026</p>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
