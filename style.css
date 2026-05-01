@@ -1,6 +1,7 @@
 /* =========================
    VARIABLES
    ========================= */
+/*mode clair*/
 :root{
   --bg: #f5f8ff;
   --bg2: #dbe9ff;
@@ -13,7 +14,7 @@
   --dark: #0f1b2d;
   --shadow: 0 14px 35px rgba(15,27,45,.12);
 }
-
+/*mode sombre*/
 html[data-theme="dark"]{
   --bg: #08111f;
   --bg2: #0f1b2d;
@@ -32,6 +33,10 @@ html[data-theme="dark"]{
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;  
+    /*arrière-plan clair*/
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   color:var(--text);
@@ -41,6 +46,7 @@ body{
     url("../assets/images/LogoAllSportsZone.png") center center / 560px no-repeat fixed,
     linear-gradient(135deg, var(--bg), var(--bg2));
 }
+    /*arrière-plan sombre*/
 html[data-theme="dark"] body{
   background:
     linear-gradient(rgba(8,17,31,.84), rgba(8,17,31,.84)),
@@ -48,14 +54,19 @@ html[data-theme="dark"] body{
     linear-gradient(135deg, var(--bg), var(--bg2));
 }
 
+/*liens jolis*/
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{width:min(1120px,92%);margin:auto}
 
+main {
+    flex: 1;
+}
 /* =========================
    HEADER
    ========================= */
 header{
+    /*arrière-plan bandeau*/
   position:sticky;
   top:0;
   z-index:1000;
@@ -64,6 +75,7 @@ header{
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+/*texte beandeau*/
 .navbar{
   display:flex;
   align-items:center;
@@ -71,7 +83,7 @@ header{
   gap:16px;
   padding:12px 0;
 }
-
+/*lien logo (home) */
 .logo{
   display:flex;
   align-items:center;
@@ -79,7 +91,7 @@ header{
   color:#fff;
   font-weight:800;
 }
-
+/*image logo*/
 .logo img{
   width:52px;
   height:52px;
@@ -89,6 +101,7 @@ header{
   padding:4px;
 }
 
+/*style bouton*/
 nav ul{
   list-style:none;
   display:flex;
@@ -99,6 +112,7 @@ nav ul{
   justify-content:flex-end;
 }
 
+/*style liens boutons*/
 nav a{
   display:inline-block;
   padding:11px 15px;
@@ -110,6 +124,7 @@ nav a{
   font-size:.95rem;
 }
 
+/*souris a côté (hover)/ souris sur le bouton (active)*/
 nav a:hover,
 nav a.active{
   background:linear-gradient(135deg,var(--primary),var(--primary2));
@@ -124,6 +139,7 @@ nav a.active{
   position:relative;
 }
 
+/* menu paramètres */
 .settings-panel{
   position:absolute;
   right:0;
@@ -139,10 +155,12 @@ nav a.active{
   z-index:2000;
 }
 
+/* afficher menu */
 .settings.open .settings-panel{
   display:block;
 }
 
+/* ligne option */
 .toggle-row{
   display:flex;
   align-items:center;
@@ -152,8 +170,10 @@ nav a.active{
   border-bottom:1px solid rgba(127,140,170,.18);
 }
 
+/* dernière ligne supp */
 .toggle-row:last-child{border-bottom:none}
 
+/* switch bouton */
 .switch{
   width:48px;
   height:28px;
@@ -164,6 +184,7 @@ nav a.active{
   flex:0 0 auto;
 }
 
+/* rond switch */
 .switch::after{
   content:"";
   width:22px;
@@ -177,10 +198,12 @@ nav a.active{
   box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
+/*switch acitivé*/
 .switch.on{
   background:linear-gradient(135deg,var(--primary),var(--primary2));
 }
 
+/*déplacement du rond*/
 .switch.on::after{
   left:23px;
 }
@@ -198,6 +221,7 @@ nav a.active{
 /* =========================
    BOUTONS
    ========================= */
+/*style boutons*/
 .btn{
   display:inline-block;
   padding:12px 18px;
@@ -208,25 +232,30 @@ nav a.active{
   cursor:pointer;
 }
 
+/*effet boutons*/
 .btn:hover{transform:translateY(-2px)}
 
+/*bouton accueim*/
 .btn.primary{
   background:linear-gradient(135deg,var(--primary),var(--primary2));
   color:#fff;
 }
 
+/*bouton paramètre*/
 .btn.secondary{
   background:rgba(255,255,255,.1);
   color:#fff;
   border:1px solid rgba(255,255,255,.14);
 }
 
+/*arrière plan boutons*/
 .btn.back{
   background:linear-gradient(135deg,var(--primary),var(--primary2));
   color:#fff;
   box-shadow:var(--shadow);
   margin-bottom:14px;
 }
+/*bouton scroll*/
 .scroll-top-btn{
   position:fixed;
   right:20px;
@@ -245,7 +274,7 @@ nav a.active{
   transition:.25s ease;
   z-index:1500;
 }
-
+/*bouton scroll affiché*/
 .scroll-top-btn.show{
   opacity:1;
   pointer-events:auto;
@@ -255,17 +284,19 @@ nav a.active{
 /* =========================
    ACCUEIL
    ========================= */
+/*espace au dessus des carteq*/
 .hero{
   padding:70px 0 28px;
 }
 
+/*séparations côtés cartes*/
 .hero-grid{
   display:grid;
   grid-template-columns:1.25fr .75fr;
   gap:24px;
   align-items:stretch;
 }
-
+/*arrière plan carte princpale*/
 .hero-box{
   background:linear-gradient(135deg, rgba(27,77,140,.98), rgba(255,111,183,.92));
   color:#fff;
@@ -276,6 +307,7 @@ nav a.active{
   overflow:hidden;
 }
 
+/*cercle décoratifs (fond) */
 .hero-box::after{
   content:"";
   position:absolute;
@@ -287,29 +319,27 @@ nav a.active{
   background:rgba(255,255,255,.08);
 }
 
+/*style titre*/
 .hero-box h1{
   margin:0 0 14px;
   font-size:clamp(2rem,4vw,3.5rem);
   line-height:1.1;
 }
 
+/*style texte*/
 .hero-box p{
   margin:0 0 22px;
   max-width:62ch;
   color:#eef5ff;
 }
 
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
+/*Espace entre les cartes de droite*/
 .hero-side{
   display:grid;
   gap:16px;
 }
 
+/*mini-cartes de droite*/
 .mini-card{
   background:var(--card);
   border-radius:var(--radius);
@@ -318,11 +348,13 @@ nav a.active{
   border:1px solid rgba(27,77,140,.08);
 }
 
+/*format de texte pour titre partie droites*/
 .mini-card h3{
   margin:0 0 8px;
   color:var(--text);
 }
 
+/*format de texte partie droite*/
 .mini-card p{
   margin:0;
   color:var(--muted);
@@ -334,7 +366,7 @@ nav a.active{
 .section{
   padding:18px 0 54px;
 }
-
+/*titre des cases section*/
 .section-title{
   display:flex;
   align-items:end;
@@ -343,27 +375,28 @@ nav a.active{
   margin-bottom:18px;
 }
 
-.section-title h2,
 .banner h1{
   margin:0;
 }
-
-.section-title p,
+/*organisation des cartes (sports) "|"*/
 .banner p{
   margin:0;
   color:var(--muted);
   max-width:62ch;
 }
 
+/*"|"*/
 .grid{
   display:grid;
   gap:18px;
 }
 
+/*"|"*/
 .grid.cards{
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 }
 
+/*animation passage sur les cartes par la souris*/
 .card-link{
   display:block;
   height:100%;
@@ -371,10 +404,12 @@ nav a.active{
   transition:transform .25s ease;
 }
 
+/*fond de carte (sporst)*/
 .card-link:hover{
   transform:translateY(-4px);
 }
 
+/*Format des cartes (sports)*/
 .card{
   height:100%;
   background:var(--card);
@@ -384,26 +419,31 @@ nav a.active{
   border:1px solid rgba(27,77,140,.08);
 }
 
+/*Format des cartes (sports)*/
 .card .thumb{
   height:190px;
   overflow:hidden;
   background:linear-gradient(135deg,var(--primary),var(--primary2));
 }
 
+/*Format des images dans les cartes*/
 .card .thumb img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
+/*Espace dans la carte*/
 .card .content{
   padding:18px;
 }
 
+/*Forma du titre (escpace apres*/
 .card h3{
   margin:0 0 8px;
 }
 
+/*Style du texte dans la carte*/
 .card p{
   margin:0;
   color:var(--muted);
@@ -412,10 +452,13 @@ nav a.active{
 /* =========================
    SPORT PAGES
    ========================= */
+/**/
+/* espace autour du bandeau de page */
 .page-banner{
   padding:28px 0 12px;
 }
 
+/* bandeau principal (titre + texte) */
 .banner{
   background: linear-gradient(135deg, rgba(220,236,255,.95), rgba(255,242,249,.95));
   border-radius:30px;
@@ -423,10 +466,12 @@ nav a.active{
   box-shadow:var(--shadow);
 }
 
+/* bandeau en mode sombre */
 html[data-theme="dark"] .banner{
   background: linear-gradient(135deg, #050b14, #0d1a2d);
 }
 
+/* organisation page sport (contenu + colonne droite) */
 .sport-layout{
   display:grid;
   grid-template-columns:1fr 320px;
@@ -434,6 +479,7 @@ html[data-theme="dark"] .banner{
   align-items:start;
 }
 
+/* bloc contenu (texte + infos) */
 .panel{
   background:var(--card);
   border-radius:var(--radius);
@@ -442,6 +488,7 @@ html[data-theme="dark"] .banner{
   border:1px solid rgba(27,77,140,.08);
 }
 
+/* image du sport */
 .sport-image{
   width:100%;
   height:280px;
@@ -450,36 +497,41 @@ html[data-theme="dark"] .banner{
   margin:14px 0 18px;
 }
 
+/* grille des stats */
 .stats{
   display:grid;
   gap:12px;
 }
 
+/* bloc individuel de stat */
 .stat{
   background:linear-gradient(135deg,var(--bg2),#fff);
   border-radius:18px;
   padding:14px 16px;
 }
 
+/* titre de stat */
 .stat strong{
   display:block;
   font-size:1.05rem;
 }
 
+/* texte secondaire de stat */
 .stat span{
   color:var(--muted);
   font-size:.93rem;
 }
-
 /* =========================
    CV MINI CARDS
    ========================= */
+/* grille des cartes CV */
 .cv-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
 
+/* carte CV */
 .cv-card{
   position:relative;
   background:var(--card);
@@ -493,10 +545,12 @@ html[data-theme="dark"] .banner{
   overflow:hidden;
 }
 
+/* effet au passage de la souris */
 .cv-card:hover{
   transform:translateY(-4px);
 }
 
+/* effet zoom (overlay sombre) */
 .cv-card .zoom{
   position:absolute;
   inset:0;
@@ -509,20 +563,24 @@ html[data-theme="dark"] .banner{
   color:#fff;
 }
 
+/* afficher effet zoom */
 .cv-card:hover .zoom{
   opacity:1;
 }
 
+/* titre carte */
 .cv-card h3{
   margin:0 0 6px;
 }
 
+/* rôle / poste */
 .cv-card .role{
   color:var(--primary);
   font-weight:700;
   margin-bottom:10px;
 }
 
+/* liste infos */
 .cv-card ul{
   margin:10px 0 0;
   padding-left:18px;
@@ -532,6 +590,7 @@ html[data-theme="dark"] .banner{
 /* =========================
    MODAL CV
    ========================= */
+/* fond du popup (cache toute la page) */
 .modal{
   display:none;
   position:fixed;
@@ -541,11 +600,13 @@ html[data-theme="dark"] .banner{
   padding:24px;
 }
 
+/* afficher le popup centrée */
 .modal.open{
   display:grid;
   place-items:center;
 }
 
+/* contenu du popup */
 .modal-content{
   width:min(920px,100%);
   max-height:90vh;
@@ -558,6 +619,7 @@ html[data-theme="dark"] .banner{
   position:relative;
 }
 
+/* bouton fermer (croix) */
 .modal-close{
   position:absolute;
   right:18px;
@@ -572,20 +634,24 @@ html[data-theme="dark"] .banner{
   cursor:pointer;
 }
 
+/* haut du popup (titre) */
 .modal-head{
   margin-bottom:18px;
 }
 
+/* titre popup */
 .modal-head h2{
   margin:0 0 6px;
 }
 
+/* organisation contenu en colonnes */
 .modal-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:18px;
 }
 
+/* bloc dans le popup */
 .modal-box{
   background:linear-gradient(135deg,var(--bg2),#fff);
   border-radius:20px;
@@ -593,6 +659,7 @@ html[data-theme="dark"] .banner{
   border:1px solid rgba(27,77,140,.08);
 }
 
+/* liste de tags */
 .tags{
   display:flex;
   flex-wrap:wrap;
@@ -600,6 +667,7 @@ html[data-theme="dark"] .banner{
   margin-top:12px;
 }
 
+/* style des tags */
 .tags span{
   display:inline-block;
   background:linear-gradient(135deg,var(--primary),var(--primary2));
@@ -612,12 +680,14 @@ html[data-theme="dark"] .banner{
 /* =========================
    REVISION
    ========================= */
+/* grille des cartes de révision */
 .revision-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:16px;
 }
 
+/* carte de révision */
 .revision-item{
   background:var(--card);
   border:1px solid rgba(27,77,140,.08);
@@ -626,6 +696,7 @@ html[data-theme="dark"] .banner{
   box-shadow:var(--shadow);
 }
 
+/* titre dans la carte */
 .revision-item h3{
   margin:0 0 8px;
 }
@@ -636,39 +707,101 @@ html[data-theme="dark"] .banner{
 footer{
   background:var(--dark);
   color:#dbe8ff;
-  padding:24px 0;
+  padding:10px 0;
   margin-top:30px;
 }
 
-footer p{
-  margin:0;
-  text-align:center;
+.footer-container{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
 }
 
+.footer-links,
+.footer-center,
+.footer-right{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.footer-links{
+  align-items:flex-start;
+  text-decoration: underline;
+}
+
+.footer-center{
+  align-items:center;
+  text-align:center;
+  margin-inline:auto;
+}
+
+.footer-right{
+  align-items:flex-end;
+  text-align:right;
+}
+
+.footer-links a,
+.footer-right a,
+.footer-mail{
+  color:#dbe8ff;
+}
+
+.footer-title,
+.footer-text,
+.footer-copy{
+  margin:0;
+  color: #97A1B0;
+}
+
+.footer-copy{
+  opacity:.8;
+}
+
+.footer-logo{
+  width:45px;
+  height:45px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:12px;
+  padding:4px;
+}
 /* =========================
    RESPONSIVE
    ========================= */
+
+/* tablette */
 @media (max-width:900px){
+
+  /* tout passe en 1 colonne */
   .hero-grid,
   .sport-layout,
   .modal-grid{
     grid-template-columns:1fr;
   }
 
+  /* menu en colonne */
   .navbar{
     flex-direction:column;
   }
 
+  /* centrer les liens */
   nav ul{
     justify-content:center;
   }
 
+  /* moins d'espace en haut */
   .hero{
     padding-top:38px;
   }
 }
 
+/* téléphone */
 @media (max-width:600px){
+
+  /* coins moins arrondis */
   .hero-box,
   .panel,
   .cv-card,
@@ -678,11 +811,13 @@ footer p{
     border-radius:20px;
   }
 
+  /* boutons pleine largeur */
   .btn{
     width:100%;
     text-align:center;
   }
 
+  /* titre en colonne */
   .section-title{
     flex-direction:column;
     align-items:start;
